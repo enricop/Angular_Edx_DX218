@@ -1,3 +1,12 @@
+<style type="text/css">
+	.highlight {
+    	background-color: yellow;
+	}
+	.strike {
+		text-decoration: line-through;
+	}
+</style>
+
 <h1>Demo App</h1>
 <h2>{{title}}</h2>
 <form>
@@ -28,3 +37,19 @@
     </fieldset>
 </form>
 <p>{{message}}</p>
+
+<p>
+    <label for="showPanelCheck">Show Panel?</label>
+    <input id="showPanelCheck" type="checkbox" [(ngModel)]="showPanel" />
+</p>
+<p *ngIf="showPanel">
+    Panel is Shown
+</p>
+<p [ngClass]="getClasses()">
+    Custom Classes
+</p>
+<p [ngStyle]="getStyles()">
+    Custom Styles
+</p>
+
+<input [(ngModel)]="name" placeholder="Enter Your Name">
