@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 @Component({
     selector: 'example-component',
-    templateUrl: 'example.component.html'
+    templateUrl: './app/example.component.html'
 })
 export class ExampleComponent implements OnInit{
     public message: string;
